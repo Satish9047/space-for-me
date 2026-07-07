@@ -2,7 +2,7 @@ import { NavLink } from "react-router/internal/react-server-client";
 
 const Navbar = () => {
   return (
-    <>
+    <div className="flex justify-between items-center p-4">
       {" "}
       <figure>
         {/* <img src="/images/logo.png" alt="SpaceMaster" /> */}
@@ -42,7 +42,7 @@ const Navbar = () => {
           Register
         </NavLink>
       </div>
-    </>
+    </div>
   );
 };
 
