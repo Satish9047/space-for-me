@@ -1,12 +1,7 @@
 import AuthLayout from "../layouts/AuthLayout";
-import RegisterPage from "../../features/auth/pages/Register.Page";
-import LoginPage from "../../features/auth/pages/Login.Page";
 import { createBrowserRouter, RouterProvider } from "react-router";
-import SpaceMasterLogin from "../../features/auth/pages/SpaceMasterLogin.Page";
 import MainLayout from "../layouts/MainLayout";
 import HomePage from "../../features/home/pages/Home.page";
-import SpacePage from "../../features/home/pages/Space.page";
-import BookingPage from "../../features/home/pages/Booking.page";
 
 const router = createBrowserRouter([
   {
@@ -19,11 +14,19 @@ const router = createBrowserRouter([
       },
       {
         path: "spaces",
-        element: <SpacePage />,
+        lazy: async () => {
+          const { default: SpacePage } =
+            await import("../../features/home/pages/Space.page");
+          return { Component: SpacePage };
+        },
       },
       {
         path: "bookings",
-        element: <BookingPage />,
+        lazy: async () => {
+          const { default: BookingPage } =
+            await import("../../features/home/pages/Booking.page");
+          return { Component: BookingPage };
+        },
       },
     ],
   },
@@ -33,15 +36,27 @@ const router = createBrowserRouter([
     children: [
       {
         path: "login",
-        element: <LoginPage />,
+        lazy: async () => {
+          const { default: LoginPage } =
+            await import("../../features/auth/pages/Login.Page");
+          return { Component: LoginPage };
+        },
       },
       {
         path: "register",
-        element: <RegisterPage />,
+        lazy: async () => {
+          const { default: RegisterPage } =
+            await import("../../features/auth/pages/Register.Page");
+          return { Component: RegisterPage };
+        },
       },
       {
         path: "space-admin-login",
-        element: <SpaceMasterLogin />,
+        lazy: async () => {
+          const { default: SpaceMasterLogin } =
+            await import("../../features/auth/pages/SpaceMasterLogin.Page");
+          return { Component: SpaceMasterLogin };
+        },
       },
     ],
   },
