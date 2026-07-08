@@ -1,7 +1,6 @@
 import AuthLayout from "../layouts/AuthLayout";
 import { createBrowserRouter, RouterProvider } from "react-router";
 import MainLayout from "../layouts/MainLayout";
-import HomePage from "../../features/home/pages/Home.page";
 
 const router = createBrowserRouter([
   {
@@ -10,7 +9,11 @@ const router = createBrowserRouter([
     children: [
       {
         path: "",
-        element: <HomePage />,
+        lazy: async () => {
+          const { default: HomePage } =
+            await import("../../features/home/pages/Home.page");
+          return { Component: HomePage };
+        },
       },
       {
         path: "spaces",

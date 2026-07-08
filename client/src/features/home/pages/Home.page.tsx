@@ -1,5 +1,5 @@
 import Container from "../../../shared/components/Container";
-import SportCard from "../../../shared/components/SportCard";
+import Card from "../../../shared/components/Card";
 
 const HomePage = () => {
   const spaces = [
@@ -155,7 +155,7 @@ const HomePage = () => {
         <div className="grid grid-cols-5  gap-4 py-4">
           {sports.map((sport) => {
             return (
-              <SportCard
+              <Card
                 key={sport.id}
                 name={sport.name}
                 image={sport.image}
@@ -188,6 +188,8 @@ const HomePage = () => {
               src="/images/feature.avif"
               alt="Featured Space"
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+              decoding="async"
             />
           </figure>
         </div>

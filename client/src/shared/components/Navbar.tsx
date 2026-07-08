@@ -1,4 +1,4 @@
-import { NavLink } from "react-router/internal/react-server-client";
+import { NavLink } from "react-router";
 
 const Navbar = () => {
   return (

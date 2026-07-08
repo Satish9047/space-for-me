@@ -1,13 +1,15 @@
 import type { ISportCard } from "../../types";
 
-const SportCard = ({ name, image, description, venues, icon }: ISportCard) => {
+const Card = ({ name, image, description, venues, icon }: ISportCard) => {
   return (
     <article className="flex h-full flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
       <figure className="overflow-hidden">
         <img
           src={image}
           alt={name}
-          className="h-44 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+          className="h-44 w-full object-cover transition-transform duration-500"
+          loading="lazy"
+          decoding="async"
         />
       </figure>
 
@@ -30,4 +32,4 @@ const SportCard = ({ name, image, description, venues, icon }: ISportCard) => {
   );
 };
 
-export default SportCard;
+export default Card;
