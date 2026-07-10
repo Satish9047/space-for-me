@@ -2,11 +2,11 @@ import { NavLink } from "react-router";
 
 const Navbar = () => {
   return (
-    <div className="flex justify-between items-center p-4">
+    <div className="flex justify-between items-center border-b border-black p-4">
       {" "}
       <figure>
         {/* <img src="/images/logo.png" alt="SpaceMaster" /> */}
-        <h3>Space for Me</h3>
+        <h3>Space</h3>
       </figure>
       <nav className="flex gap-8">
         <NavLink

@@ -113,7 +113,7 @@ const HomePage = () => {
 
   return (
     <>
-      <section className="relative min-h-[90vh] overflow-hidden">
+      <section className="relative min-h-[90vh] overflow-hidden mb-8">
         {/* Background Image */}
         <img
           src="/images/main-hero.avif"

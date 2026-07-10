@@ -5,3 +5,13 @@ export interface ISportCard {
   venues: number;
   icon: string;
 }
+
+export type Venue = {
+  id: number;
+  name: string;
+  image: string;
+  location: string;
+  price: number;
+  catagory: string;
+  tags: string[];
+};

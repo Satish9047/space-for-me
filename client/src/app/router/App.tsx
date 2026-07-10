@@ -31,6 +31,14 @@ const router = createBrowserRouter([
           return { Component: BookingPage };
         },
       },
+      {
+        path: "space-dashboard",
+        lazy: async () => {
+          const { default: SpaceDashboard } =
+            await import("../../features/space-dashboard/pages/space-deshboard");
+          return { Component: SpaceDashboard };
+        },
+      },
     ],
   },
   {
