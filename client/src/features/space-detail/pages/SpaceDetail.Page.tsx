@@ -1,7 +1,7 @@
-import React from "react";
-
 const SpaceDetailPage = () => {
-  return <div>SpaceDetailPage</div>;
+  return <div>
+    <div></div>
+  </div>;
 };
 
 export default SpaceDetailPage;

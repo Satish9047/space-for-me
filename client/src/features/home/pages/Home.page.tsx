@@ -154,16 +154,7 @@ const HomePage = () => {
         </div>
         <div className="grid grid-cols-5  gap-4 py-4">
           {sports.map((sport) => {
-            return (
-              <Card
-                key={sport.id}
-                name={sport.name}
-                image={sport.image}
-                description={sport.description}
-                venues={sport.venues}
-                icon={sport.icon}
-              />
-            );
+            return <Card spaceInfo={sport} />;
           })}
         </div>
       </Container>

@@ -1,6 +1,7 @@
 import AuthLayout from "../layouts/AuthLayout";
 import { createBrowserRouter, RouterProvider } from "react-router";
 import MainLayout from "../layouts/MainLayout";
+import SpaceMasterLayout from "../layouts/SpaceMasterLayout";
 
 const router = createBrowserRouter([
   {
@@ -31,14 +32,6 @@ const router = createBrowserRouter([
           return { Component: BookingPage };
         },
       },
-      {
-        path: "space-dashboard",
-        lazy: async () => {
-          const { default: SpaceDashboard } =
-            await import("../../features/space-dashboard/pages/space-deshboard");
-          return { Component: SpaceDashboard };
-        },
-      },
     ],
   },
   {
@@ -67,6 +60,52 @@ const router = createBrowserRouter([
           const { default: SpaceMasterLogin } =
             await import("../../features/auth/pages/SpaceMasterLogin.Page");
           return { Component: SpaceMasterLogin };
+        },
+      },
+    ],
+  },
+  {
+    path: "space-dashboard",
+    element: <SpaceMasterLayout />,
+    children: [
+      {
+        path: "overview",
+        lazy: async () => {
+          const { default: SpaceDashboard } =
+            await import("../../features/space-dashboard/pages/space-dashboard");
+          return { Component: SpaceDashboard };
+        },
+      },
+      {
+        path: "calendar",
+        lazy: async () => {
+          const { default: SpaceDashboard } =
+            await import("../../features/space-dashboard/pages/space-dashboard");
+          return { Component: SpaceDashboard };
+        },
+      },
+      {
+        path: "space",
+        lazy: async () => {
+          const { default: SpaceDashboard } =
+            await import("../../features/space-dashboard/pages/space-dashboard");
+          return { Component: SpaceDashboard };
+        },
+      },
+      {
+        path: "finance",
+        lazy: async () => {
+          const { default: SpaceDashboard } =
+            await import("../../features/space-dashboard/pages/space-dashboard");
+          return { Component: SpaceDashboard };
+        },
+      },
+      {
+        path: "settings",
+        lazy: async () => {
+          const { default: SpaceDashboard } =
+            await import("../../features/space-dashboard/pages/space-dashboard");
+          return { Component: SpaceDashboard };
         },
       },
     ],
