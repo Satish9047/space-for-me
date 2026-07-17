@@ -71,41 +71,41 @@ const router = createBrowserRouter([
       {
         path: "overview",
         lazy: async () => {
-          const { default: SpaceDashboard } =
-            await import("../../features/space-dashboard/pages/space-dashboard");
-          return { Component: SpaceDashboard };
+          const { default: OverviewPage } =
+            await import("../../features/space-dashboard/pages/overview");
+          return { Component: OverviewPage };
         },
       },
       {
         path: "calendar",
         lazy: async () => {
-          const { default: SpaceDashboard } =
-            await import("../../features/space-dashboard/pages/space-dashboard");
-          return { Component: SpaceDashboard };
+          const { default: CalendarPage } =
+            await import("../../features/space-dashboard/pages/calendar");
+          return { Component: CalendarPage };
         },
       },
       {
-        path: "space",
+        path: "spaces",
         lazy: async () => {
-          const { default: SpaceDashboard } =
-            await import("../../features/space-dashboard/pages/space-dashboard");
-          return { Component: SpaceDashboard };
+          const { default: SpacesPage } =
+            await import("../../features/space-dashboard/pages/spaces");
+          return { Component: SpacesPage };
         },
       },
       {
         path: "finance",
         lazy: async () => {
-          const { default: SpaceDashboard } =
-            await import("../../features/space-dashboard/pages/space-dashboard");
-          return { Component: SpaceDashboard };
+          const { default: FinancePage } =
+            await import("../../features/space-dashboard/pages/finance");
+          return { Component: FinancePage };
         },
       },
       {
         path: "settings",
         lazy: async () => {
-          const { default: SpaceDashboard } =
-            await import("../../features/space-dashboard/pages/space-dashboard");
-          return { Component: SpaceDashboard };
+          const { default: SettingsPage } =
+            await import("../../features/space-dashboard/pages/settings");
+          return { Component: SettingsPage };
         },
       },
     ],

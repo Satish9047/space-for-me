@@ -24,8 +24,7 @@ const SpaceMasterLayout = () => {
           <img src="" alt="" className="h-12 w-12 rounded-full bg-gray-300" />
 
           <div>
-            <p className="font-semibold">Satish Prajapati</p>
-            <p className="text-sm text-gray-500">Space Owner</p>
+            <p className="font-semibold">Bhaktapur Futsal </p>
           </div>
         </div>
 
@@ -33,32 +32,40 @@ const SpaceMasterLayout = () => {
         <nav className="flex-1 space-y-2 px-4">
           <div className="flex items-center gap-3 rounded-lg px-3 py-2 hover:bg-white">
             <PanelsTopLeft size={20} />
-            <NavLink to="/auth/login">Overview</NavLink>
+            <NavLink to="/space-dashboard/overview">Overview</NavLink>
           </div>
 
           <div className="flex items-center gap-3 rounded-lg px-3 py-2 hover:bg-white">
             <CalendarDays size={20} />
-            <NavLink to="/auth/login">Calendar</NavLink>
+            <NavLink to="/space-dashboard/calendar">Calendar</NavLink>
           </div>
 
           <div className="flex items-center gap-3 rounded-lg px-3 py-2 hover:bg-white">
             <Eclipse size={20} />
-            <NavLink to="/auth/login">Spaces</NavLink>
+            <NavLink to="/space-dashboard/spaces">Spaces</NavLink>
           </div>
 
           <div className="flex items-center gap-3 rounded-lg px-3 py-2 hover:bg-white">
             <Landmark size={20} />
-            <NavLink to="/auth/login">Finance</NavLink>
+            <NavLink to="/space-dashboard/finance">Finance</NavLink>
           </div>
 
           <div className="flex items-center gap-3 rounded-lg px-3 py-2 hover:bg-white">
             <Settings size={20} />
-            <NavLink to="/auth/login">Settings</NavLink>
+            <NavLink to="/space-dashboard/settings">Settings</NavLink>
           </div>
         </nav>
 
         {/* Footer */}
         <div className="border-t p-4">
+          <div className="flex items-center gap-3 p-6">
+            <img src="" alt="" className="h-12 w-12 rounded-full bg-gray-300" />
+
+            <div>
+              <p className="font-semibold">Satish Prajapati</p>
+              <p className="text-sm text-gray-500">Space Owner</p>
+            </div>
+          </div>
           <Button className="mb-2 w-full">Profile</Button>
 
           <Button variant="outline" className="w-full">

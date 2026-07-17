@@ -20,13 +20,13 @@ type Props = {
 
 const StatCard = ({ stat }: Props) => {
   return (
-    <Card className="min-w-xs">
+    <Card className="w-full">
       <CardHeader>
         <CardAction>
           <Badge variant="secondary">{stat.icon}</Badge>
         </CardAction>
-        <CardTitle>{stat.title}</CardTitle>
-        <CardDescription>{stat.data}</CardDescription>
+        <CardTitle className="">{stat.title}</CardTitle>
+        <CardDescription className="text-xl">{stat.data}</CardDescription>
       </CardHeader>
     </Card>
   );

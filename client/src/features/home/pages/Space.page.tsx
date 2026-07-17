@@ -151,7 +151,7 @@ const SpacePage = () => {
             <Input
               type="search"
               placeholder="Search..."
-              className="text-lg p-4 rounded-md outline border-0"
+              className="text-lg p-4 rounded-md outline "
             />
             <Button>Search</Button>
           </Field>
